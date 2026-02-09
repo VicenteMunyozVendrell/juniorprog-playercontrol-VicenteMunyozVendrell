@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] GameObject player;
     private Vector3 offset = new Vector3(0f, 7f, -7f);
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+  
     void LateUpdate()
     {
+        //Move the camera behind the car with and offset
         transform.position = player.transform.position + offset;
     }
 }
